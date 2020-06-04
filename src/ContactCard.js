@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 
-const ContactCard = () => {
+const ContactCard = (props) => {
     const [showAge, setShowAge] = useState(false); // this is a react hook
     
     return (
         <div className="contact-card">
             <img 
-                src="https://via.placeholder.com/150" 
+                src={props.avatarUrl} 
                 alt="profile image placeholder">
             </img>
             <div className="user-details">
-                <p>Name: Jenny Han</p>
-                <p>Email: jenny.han@fake.com</p>
+                <p>Name: {props.name}</p>
+                <p>Email: {props.email}</p>
                 <button onClick={()=> setShowAge(!showAge)}>Show Age</button>
-                {showAge && <p>Age: 25</p>}
+                {showAge && <p>Age: {props.age}</p>}
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default ContactCard;
