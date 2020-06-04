@@ -1,12 +1,18 @@
 import React from 'react';
+import './App.css';
 
 const App = () => {
-  const title = "Hello world this is dynamic";
-  return (
-    <div>
-      <h1>{title}</h1>
-      <h2 onClick={() => alert("you clicked the message")}>
-        React project, contact list, coming soon!</h2>
+  return(
+    <div className="contact-card">
+      <img 
+        src="https://via.placeholder.com/150" 
+        alt="profile image placeholder">
+      </img>
+      <div className="user-details">
+        <p>Name: Jenny Han</p>
+        <p>Email: jenny.han@fake.com</p>
+        <p>Age: 25</p>
+      </div>
     </div>
   )
 }
