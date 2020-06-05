@@ -35,6 +35,7 @@ const App = () => {
       {contacts.map((contact, index) => {
         return (
           <ContactCard 
+            key = {index}
             avatarUrl = {contact.avatarUrl}
             name = {contact.name} 
             email = {contact.email}
